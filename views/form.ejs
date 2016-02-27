@@ -1,0 +1,61 @@
+<h2>
+Enter  Details
+</h2>
+<br/>
+<div class="container">
+    <form class="form-horizontal" action ="/upload" role="form" id="form" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for='name'>
+                 Name
+            </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control " id='name' name='name' placeholder="Enter Name"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">
+                 Schedules
+            </label>
+            <div id="gallery">
+                <div class="col-lg-12" id="uploadFile">
+                    <input type="file" name="uploadFile" /><a onclick="clearFileInputField('uploadFile')" href="javascript:noAction();">Clear</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for='name'>
+                Testing 
+            </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control " id='name' name='test' placeholder="Enter Name"/>
+            </div>
+        </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="hidden" name="user" value="Academy"/>
+                <button type="submit" class="btn btn-success" >
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+
+function clearFileInputField(tagId) {
+
+    document.getElementById(tagId).innerHTML =
+
+        document.getElementById(tagId).innerHTML;
+
+    }
+
+</script>
+<style>
+#gallery{
+    margin-left: 180px;
+}
+
+</style>
